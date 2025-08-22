@@ -1,12 +1,8 @@
 {
-  "dependencies": {
-    "express": "^5.1.0"
-  },
   "name": "node",
   "version": "1.0.0",
-  "description": "aqui vai ficar um meus estudos sobre nmp",
   "main": "index.js",
-  "devDependencies": {},
+  "type":"module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/Marcello-Dev2/Node-js/issues"
   },
-  "homepage": "https://github.com/Marcello-Dev2/Node-js#readme"
+  "homepage": "https://github.com/Marcello-Dev2/Node-js#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
 }
