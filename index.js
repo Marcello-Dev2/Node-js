@@ -1,5 +1,5 @@
-import express, { request, response } from "express"
-import { memo } from "react";
+import express from "express"
+
 
 const app = express()
 
@@ -15,8 +15,11 @@ app.get("/users", (request, response)=>{
 });
 
 app.post("/users", (request, response)=> {
-    console.log(request)
-    return response.json({ ok: true })
+    const name = request.body.name
+    const age = request.body.age
+    user.push({name, age})
+    return response.json({ name, age })
+
 })
 
 app.listen(3000)
