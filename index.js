@@ -19,16 +19,16 @@ app.post("/users", (request, response) => {
     const age = request.body.age;
     const nickName = request.body.nick;
 
-    users.push({ name, age, nickName});
+    users.push({ name , age , nickName });
 
-    return response.json({ name, age , nickName });
+    return response.json({ name , age , nickName });
 });
 
 
 mongoose.connect
 ('mongodb+srv://Marcello:7zPjfLjvITB9OwCJ@cluster0.035pzka.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
 
-.then(() => console.log("Banco de dados conect"))
+.then(() => console.log("Banco de dados conectar"))
 .catch(() => console.log("Deu erro"))
 
 app.listen(3000);
