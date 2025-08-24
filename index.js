@@ -1,4 +1,5 @@
-import express from "express"
+import express from "express";
+import mongoose from "mongoose";
 
 const app = express()
 
@@ -22,5 +23,12 @@ app.post("/users", (request, response) => {
 
     return response.json({ name, age , nickName });
 });
+
+
+mongoose.connect
+('mongodb+srv://Marcello:7zPjfLjvITB9OwCJ@cluster0.035pzka.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+
+.then(() => console.log("Banco de dados conect"))
+.catch(() => console.log("Deu erro"))
 
 app.listen(3000);
