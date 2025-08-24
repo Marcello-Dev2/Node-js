@@ -1,25 +1,26 @@
 import express from "express"
 
-
 const app = express()
 
 app.use(express.json())
 
-const user = []
+const users = []
 
-//ROTAS
+//rotas
 
-app.get("/users", (request, response)=>{
-    return response.json(user)
-
-});
-
-app.post("/users", (request, response)=> {
-    const name = request.body.name
-    const age = request.body.age
-    user.push({name, age})
-    return response.json({ name, age })
-
+app.get("/users", (request, response) => {
+    return response.json(users)
 })
 
-app.listen(3000)
+app.post("/users", (request, response) => {
+
+    const name = request.body.name;
+    const age = request.body.age;
+    const nickName = request.body.nick;
+
+    users.push({ name, age, nickName});
+
+    return response.json({ name, age , nickName });
+});
+
+app.listen(3000);
