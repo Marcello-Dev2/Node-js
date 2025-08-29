@@ -3,8 +3,8 @@ import express from "express"
 const app = express()
 
 //ROTAS
-app.get("/users", function (request, response) {
-     console.log(request.query)
+app.get("/users/:id", function (request, response) {
+     console.log(request.params)
     response.send("Mercelo")
     
 })
